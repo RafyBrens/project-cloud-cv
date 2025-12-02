@@ -1,0 +1,124 @@
+{
+  "name": "Your Name",
+  "title": "Cloud Engineer | Software Developer",
+  "email": "your.email@example.com",
+  "phone": "+1 234 567 8900",
+  "location": "City, Country",
+  "summary": "Passionate Cloud Engineer and Software Developer with expertise in designing and deploying scalable cloud infrastructure. Experienced in GCP, AWS, containerization, and Infrastructure as Code. Strong background in building production-ready applications with focus on reliability, security, and cost optimization.",
+  
+  "experience": [
+    {
+      "position": "Cloud Engineer",
+      "company": "Tech Company Inc.",
+      "duration": "Jan 2022 - Present",
+      "location": "Remote",
+      "responsibilities": [
+        "Designed and deployed cloud infrastructure on GCP using Terraform",
+        "Implemented CI/CD pipelines for automated deployments",
+        "Reduced infrastructure costs by 40% through optimization strategies",
+        "Migrated legacy applications to containerized microservices on Cloud Run"
+      ]
+    },
+    {
+      "position": "Software Developer",
+      "company": "StartupXYZ",
+      "duration": "Jun 2020 - Dec 2021",
+      "location": "City, Country",
+      "responsibilities": [
+        "Developed full-stack web applications using React and Node.js",
+        "Integrated third-party APIs and payment gateways",
+        "Implemented automated testing and code quality checks",
+        "Collaborated with cross-functional teams in Agile environment"
+      ]
+    },
+    {
+      "position": "Junior Developer",
+      "company": "Software Solutions Ltd.",
+      "duration": "Jan 2019 - May 2020",
+      "location": "City, Country",
+      "responsibilities": [
+        "Built responsive web interfaces using HTML, CSS, and JavaScript",
+        "Maintained and debugged existing applications",
+        "Participated in code reviews and team knowledge sharing"
+      ]
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Master of Science in Computer Science",
+      "institution": "University Name",
+      "duration": "2024 - 2026",
+      "location": "City, Country",
+      "description": "Specialization in Cloud Computing and Distributed Systems"
+    },
+    {
+      "degree": "Bachelor of Science in Computer Engineering",
+      "institution": "University Name",
+      "duration": "2015 - 2019",
+      "location": "City, Country",
+      "description": "GPA: 3.8/4.0. Relevant coursework: Algorithms, Data Structures, Operating Systems, Networks"
+    }
+  ],
+  
+  "skills": [
+    {
+      "category": "Cloud Platforms",
+      "items": ["Google Cloud Platform", "AWS", "Azure", "Cloud Run", "Cloud Functions", "Kubernetes", "GKE"]
+    },
+    {
+      "category": "Infrastructure as Code",
+      "items": ["Terraform", "Ansible", "CloudFormation", "Pulumi"]
+    },
+    {
+      "category": "Programming Languages",
+      "items": ["Python", "JavaScript", "TypeScript", "Go", "Java", "Bash"]
+    },
+    {
+      "category": "Databases",
+      "items": ["Firestore", "PostgreSQL", "MySQL", "MongoDB", "Redis", "BigQuery"]
+    },
+    {
+      "category": "DevOps & Tools",
+      "items": ["Docker", "Git", "CI/CD", "Jenkins", "GitHub Actions", "Monitoring", "Logging"]
+    },
+    {
+      "category": "Web Technologies",
+      "items": ["React", "Node.js", "Flask", "REST APIs", "GraphQL", "HTML/CSS"]
+    }
+  ],
+  
+  "projects": [
+    {
+      "name": "Cloud CV Platform",
+      "technologies": "GCP, Terraform, Cloud Run, Firestore, Python Flask",
+      "description": "Serverless CV website with visitor analytics and contact form. Deployed using Infrastructure as Code with one-command deployment. Demonstrates cloud-native architecture and auto-scaling."
+    },
+    {
+      "name": "Microservices E-commerce Platform",
+      "technologies": "Kubernetes, Docker, Node.js, MongoDB, Redis",
+      "description": "Scalable e-commerce platform with microservices architecture. Features include product catalog, shopping cart, payment integration, and order management."
+    },
+    {
+      "name": "Real-time Chat Application",
+      "technologies": "WebSockets, React, Node.js, MongoDB",
+      "description": "Live chat application with real-time messaging, user authentication, and message persistence. Deployed on cloud infrastructure with auto-scaling."
+    },
+    {
+      "name": "Data Pipeline & Analytics",
+      "technologies": "BigQuery, Cloud Functions, Pub/Sub, Python",
+      "description": "Event-driven data pipeline for processing and analyzing large datasets. Automated ETL processes with scheduled jobs and real-time analytics."
+    },
+    {
+      "name": "Infrastructure Monitoring Dashboard",
+      "technologies": "Grafana, Prometheus, Cloud Monitoring, Python",
+      "description": "Custom monitoring solution for cloud infrastructure with alerting, metrics collection, and visualization. Tracks SLIs/SLOs for production services."
+    },
+    {
+      "name": "CI/CD Automation Framework",
+      "technologies": "Jenkins, Docker, Terraform, GitHub Actions",
+      "description": "Automated deployment pipeline with testing, security scanning, and infrastructure provisioning. Reduced deployment time by 70%."
+    }
+  ]
+}
+
