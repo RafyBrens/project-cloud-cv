@@ -2,8 +2,12 @@
 
 # GCP CV Website - One-Command Deployment Script
 # Cloud Computing Final Project
+#
+# Note: This script automatically handles Firestore database persistence.
+# Firestore databases cannot be deleted in GCP, so they're imported if they exist.
 
-set -e
+# Disable exit on error temporarily (we handle Firestore error manually)
+# set -e
 
 echo "======================================"
 echo "GCP CV Website Deployment"
@@ -58,7 +62,38 @@ fi
 
 echo ""
 echo -e "${BLUE}Step 5: Applying Terraform configuration...${NC}"
-terraform apply -auto-approve
+
+# Try terraform apply, capture output and exit code
+APPLY_OUTPUT=$(terraform apply -auto-approve 2>&1)
+APPLY_EXIT_CODE=$?
+
+# Check if Firestore database already exists error occurred
+if [ $APPLY_EXIT_CODE -ne 0 ] && echo "$APPLY_OUTPUT" | grep -q "Database already exists"; then
+    echo -e "${YELLOW}⚠ Firestore database already exists (normal after cleanup)${NC}"
+    echo -e "${BLUE}Importing existing Firestore database into Terraform state...${NC}"
+    
+    # Import the existing Firestore database
+    terraform import google_firestore_database.cv_database "projects/${PROJECT_ID}/databases/(default)" || {
+        echo -e "${YELLOW}Note: Database may already be in state${NC}"
+    }
+    
+    echo -e "${BLUE}Retrying Terraform apply...${NC}"
+    terraform apply -auto-approve
+    
+    if [ $? -ne 0 ]; then
+        echo -e "${YELLOW}Error: Terraform apply failed${NC}"
+        echo "$APPLY_OUTPUT"
+        exit 1
+    fi
+    echo -e "${GREEN}✓ Infrastructure deployed successfully${NC}"
+elif [ $APPLY_EXIT_CODE -ne 0 ]; then
+    # Some other error occurred
+    echo -e "${YELLOW}Error: Terraform apply failed${NC}"
+    echo "$APPLY_OUTPUT"
+    exit 1
+else
+    echo -e "${GREEN}✓ Infrastructure deployed successfully${NC}"
+fi
 
 echo ""
 echo -e "${BLUE}Step 6: Building and deploying application to Cloud Run...${NC}"
