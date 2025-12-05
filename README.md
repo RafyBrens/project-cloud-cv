@@ -346,7 +346,7 @@ This is a final project for Cloud Computing course. Feel free to use it as a tem
 
 ## License
 
-MIT License - Feel free to use this for your own CV!
+Do not copy!
 
 ## Contact
 
